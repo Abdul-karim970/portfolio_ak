@@ -10,7 +10,48 @@ document.addEventListener("DOMContentLoaded", () => {
   initSmoothScroll();
   initMobileMenu();
   initContactForm();
+  initPhoneLinks();
 });
+
+/**
+ * Phone links: dialer on Android/iOS, WhatsApp app or web on laptop.
+ * Drag-selecting the number copies it instead of navigating.
+ */
+function isPhoneDevice() {
+  return /iPhone|iPod|Android.+Mobile|Windows Phone/i.test(navigator.userAgent || "");
+}
+
+function isTextSelectedIn(el) {
+  const sel = window.getSelection();
+  if (!sel || sel.isCollapsed || !sel.toString().trim()) return false;
+  return el.contains(sel.anchorNode) || el.contains(sel.focusNode);
+}
+
+function initPhoneLinks() {
+  document.querySelectorAll("[data-phone-link]").forEach((link) => {
+    let startX = 0;
+    let startY = 0;
+
+    link.addEventListener("mousedown", (e) => {
+      startX = e.clientX;
+      startY = e.clientY;
+    });
+
+    link.addEventListener("click", (e) => {
+      const dragged = Math.abs(e.clientX - startX) > 5 || Math.abs(e.clientY - startY) > 5;
+      if (dragged || isTextSelectedIn(link)) {
+        e.preventDefault();
+        return;
+      }
+
+      if (isPhoneDevice()) return;
+
+      e.preventDefault();
+      const phone = link.getAttribute("data-phone") || "923057099816";
+      window.open(`https://wa.me/${phone}`, "_blank", "noopener,noreferrer");
+    });
+  });
+}
 
 /**
  * Contact form: opens mailto with pre-filled data

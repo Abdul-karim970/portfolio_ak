@@ -1325,6 +1325,12 @@ body {
   transition: color 0.3s ease;
 }
 
+.footer__phone-link {
+  cursor: pointer;
+  -webkit-user-select: text;
+  user-select: text;
+}
+
 .footer__contact-item a:hover {
   color: var(--accent-main);
 }
@@ -1404,6 +1410,38 @@ body {
 
 .scroll-top:active {
   transform: scale(0.98);
+}
+
+/* ==========================================
+   WHATSAPP FAB
+   ========================================== */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: #25d366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 60px rgba(37, 211, 102, 0.4);
+  z-index: 998;
+  transition: bottom 0.3s cubic-bezier(0.16, 1, 0.3, 1), transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.whatsapp-fab:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp-fab:active {
+  transform: scale(0.98);
+}
+
+.scroll-top.visible + .whatsapp-fab {
+  bottom: calc(32px + 56px + 12px);
 }
 
 /* ==========================================
@@ -2012,5 +2050,21 @@ body {
   .scroll-top svg {
     width: 20px;
     height: 20px;
+  }
+
+  .whatsapp-fab {
+    bottom: 20px;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .whatsapp-fab svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .scroll-top.visible + .whatsapp-fab {
+    bottom: calc(20px + 48px + 12px);
   }
 }
