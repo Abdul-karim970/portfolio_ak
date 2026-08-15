@@ -18,7 +18,20 @@ document.addEventListener("DOMContentLoaded", () => {
  * Drag-selecting the number copies it instead of navigating.
  */
 function isPhoneDevice() {
-  return /iPhone|iPod|Android.+Mobile|Windows Phone/i.test(navigator.userAgent || "");
+  const ua = navigator.userAgent || "";
+  if (/iPhone|iPod|Windows Phone|IEMobile|Opera Mini/i.test(ua)) return true;
+  if (/Android/i.test(ua) && /Mobile/i.test(ua)) return true;
+  if (/Android/i.test(ua) && !/Tablet|Pad/i.test(ua) && Math.min(screen.width, screen.height) <= 600) {
+    return true;
+  }
+  if (
+    navigator.maxTouchPoints > 1 &&
+    /MacIntel/i.test(navigator.platform || "") &&
+    Math.min(screen.width, screen.height) < 500
+  ) {
+    return true;
+  }
+  return false;
 }
 
 function isTextSelectedIn(el) {
@@ -44,10 +57,15 @@ function initPhoneLinks() {
         return;
       }
 
-      if (isPhoneDevice()) return;
+      const phone = link.getAttribute("data-phone") || "923057099816";
+
+      if (isPhoneDevice()) {
+        e.preventDefault();
+        window.location.href = `tel:+${phone}`;
+        return;
+      }
 
       e.preventDefault();
-      const phone = link.getAttribute("data-phone") || "923057099816";
       window.open(`https://wa.me/${phone}`, "_blank", "noopener,noreferrer");
     });
   });

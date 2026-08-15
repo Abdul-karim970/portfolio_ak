@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Abdul Karim</title>
+    <style>
+      body {
+        font-family: system-ui, sans-serif;
+        margin: 0;
+        min-height: 100vh;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: #fcfdff;
+        color: #2d3a4b;
+      }
+      body.is-fallback {
+        display: flex;
+      }
+      .box {
+        text-align: center;
+        padding: 24px;
+        max-width: 320px;
+      }
+      p {
+        margin: 0 0 8px;
+      }
+      .hint {
+        font-size: 14px;
+        color: #5e6d7a;
+        margin-bottom: 16px;
+      }
+      a {
+        display: block;
+        margin-top: 10px;
+        padding: 12px 20px;
+        border-radius: 8px;
+        background: #32aaa6;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      a.secondary {
+        background: transparent;
+        color: #32aaa6;
+        border: 1px solid #32aaa6;
+      }
+    </style>
+    <script>
+      (function () {
+        var phone = "923057099816";
+        var tel = "tel:+" + phone;
+        var wa = "https://wa.me/" + phone;
+        var ua = navigator.userAgent || "";
+        var isPhone =
+          /iPhone|iPod|Windows Phone|IEMobile|Opera Mini/i.test(ua) ||
+          (/Android/i.test(ua) && /Mobile/i.test(ua)) ||
+          (/Android/i.test(ua) && !/Tablet|Pad/i.test(ua) && Math.min(screen.width, screen.height) <= 600) ||
+          (navigator.maxTouchPoints > 1 &&
+            /MacIntel/i.test(navigator.platform || "") &&
+            Math.min(screen.width, screen.height) < 500);
+
+        // Instant navigate — do not window.open (popup-blocked from PDF, leaves this page visible).
+        window.location.replace(isPhone ? tel : wa);
+
+        document.addEventListener("DOMContentLoaded", function () {
+          var callBtn = document.getElementById("call");
+          var waBtn = document.getElementById("whatsapp");
+          var hint = document.getElementById("hint");
+          if (callBtn) callBtn.href = tel;
+          if (waBtn) {
+            waBtn.href = wa;
+            waBtn.target = "_blank";
+            waBtn.rel = "noopener noreferrer";
+          }
+          if (hint) {
+            hint.textContent = isPhone
+              ? "If the dialer did not open, tap Call."
+              : "If WhatsApp did not open, tap the button.";
+          }
+          setTimeout(function () {
+            document.body.classList.add("is-fallback");
+          }, 1200);
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="box">
+      <p>Opening…</p>
+      <p id="hint" class="hint">Choose Call on a phone, or WhatsApp on a laptop.</p>
+      <a id="call" href="tel:+923057099816">Call +92 305 7099816</a>
+      <a id="whatsapp" class="secondary" href="https://wa.me/923057099816" target="_blank" rel="noopener noreferrer">Open WhatsApp</a>
+    </div>
+  </body>
+</html>
