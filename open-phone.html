@@ -2,13 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0;url=./go.html?to=phone" />
-    <title>Contact Abdul Karim</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
     <script>
-      location.replace("./go.html?to=phone");
+      (function () {
+        var phone = "923057099816";
+        var tel = "tel:+" + phone;
+        var wa = "https://wa.me/" + phone;
+        var ua = navigator.userAgent || "";
+        var isPhone =
+          /iPhone|iPod|Windows Phone|IEMobile|Opera Mini/i.test(ua) ||
+          (/Android/i.test(ua) && /Mobile/i.test(ua)) ||
+          (/Android/i.test(ua) && !/Tablet|Pad/i.test(ua) && Math.min(screen.width, screen.height) <= 600) ||
+          (navigator.maxTouchPoints > 1 &&
+            /MacIntel/i.test(navigator.platform || "") &&
+            Math.min(screen.width, screen.height) < 500);
+
+        if (isPhone) {
+          location.replace(tel);
+          return;
+        }
+
+        // Replaced the PDF tab (Chrome): try WhatsApp in a new tab, then return to the PDF.
+        // Never also navigate this tab — that opened WhatsApp twice.
+        if (history.length > 1) {
+          var popup = window.open(wa, "_blank");
+          if (popup) {
+            try {
+              popup.opener = null;
+            } catch (e) {}
+            history.back();
+            return;
+          }
+        }
+
+        location.replace(wa);
+      })();
     </script>
   </head>
-  <body>
-    <p><a href="./go.html?to=phone">Continue</a></p>
-  </body>
+  <body></body>
 </html>
