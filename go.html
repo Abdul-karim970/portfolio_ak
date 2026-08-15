@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Opening…</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: system-ui, sans-serif;
+      }
+      body {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: #fcfdff;
+        color: #2d3a4b;
+      }
+      body.is-fallback {
+        display: flex;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        width: 100%;
+        padding: 24px;
+        box-sizing: border-box;
+        background: #32aaa6;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: none;
+        text-align: center;
+      }
+    </style>
+    <script>
+      (function () {
+        var PHONE = "923057099816";
+        var DEST = {
+          linkedin: {
+            url: "https://www.linkedin.com/in/abdulkarim-developer",
+            label: "Open LinkedIn",
+          },
+          portfolio: {
+            url: "https://abdulkarim-portfolio.netlify.app/",
+            label: "Open portfolio",
+          },
+          phone: {
+            url: "https://wa.me/" + PHONE,
+            phoneUrl: "tel:+" + PHONE,
+            label: "Open WhatsApp",
+          },
+        };
+
+        var params = new URLSearchParams(location.search);
+        var key = params.get("to") || "phone";
+        var dest = DEST[key] || DEST.phone;
+        var ua = navigator.userAgent || "";
+        var isPhone =
+          /iPhone|iPod|Windows Phone|IEMobile|Opera Mini/i.test(ua) ||
+          (/Android/i.test(ua) && /Mobile/i.test(ua)) ||
+          (/Android/i.test(ua) && !/Tablet|Pad/i.test(ua) && Math.min(screen.width, screen.height) <= 600) ||
+          (navigator.maxTouchPoints > 1 &&
+            /MacIntel/i.test(navigator.platform || "") &&
+            Math.min(screen.width, screen.height) < 500);
+
+        function restorePdf() {
+          if (history.length > 1) history.back();
+        }
+
+        function openDest(url) {
+          var w = window.open(url, "_blank", "noopener,noreferrer");
+          if (w) {
+            restorePdf();
+            return true;
+          }
+          return false;
+        }
+
+        if (isPhone) {
+          window.location.replace(dest.phoneUrl || dest.url);
+          return;
+        }
+
+        // Preview/Adobe/Firefox often already opened this page in a new tab.
+        if (history.length <= 1) {
+          window.location.replace(dest.url);
+          return;
+        }
+
+        // Chrome PDF viewer replaced the resume tab. Try a real new tab, then go back.
+        if (openDest(dest.url)) return;
+
+        document.addEventListener("DOMContentLoaded", function () {
+          var go = document.getElementById("go");
+          go.href = dest.url;
+          go.textContent = dest.label;
+          go.addEventListener("click", function () {
+            setTimeout(restorePdf, 50);
+          });
+          document.body.classList.add("is-fallback");
+          go.focus();
+        });
+      })();
+    </script>
+  </head>
+  <body>
+    <a id="go" href="https://abdulkarim-portfolio.netlify.app/" target="_blank" rel="noopener noreferrer">Open</a>
+  </body>
+</html>
