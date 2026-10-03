@@ -90,7 +90,7 @@ for line in lines:
 # ---- stats row
 f_num = font(F_BLACK, 38)
 f_lab = font(F_REG, 14)
-stats = [("5+", "YEARS EXPERIENCE", 70), ("40+", "APPS PUBLISHED", 290), ("80k+", "DOWNLOADS", 510)]
+stats = [("5+", "YEARS EXPERIENCE", 70), ("40+", "APPS PUBLISHED", 290)]
 for num, lab, sx in stats:
     d.text((sx, 470), num, font=f_num, fill=(16, 20, 43, 255))
     d.text((sx + 2, 524), lab, font=f_lab, fill=(117, 123, 153, 255))
