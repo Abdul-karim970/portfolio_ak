@@ -425,10 +425,10 @@ print("Featured slides:")
 
 clust_cus = dict(accent="#2563eb", tint="#eef4ff", kicker="RIDE-HAILING · ALBANIA · CUSTOMER APP",
                  title="Clust Customer", tagline="One-tap booking, fare estimates, live driver tracking and in-app chat.",
-                 metric="10k+ downloads")
+                 )
 clust_dri = dict(accent="#1d4ed8", tint="#eef2ff", kicker="RIDE-HAILING · ALBANIA · DRIVER APP",
                  title="Clust Driver", tagline="Go online, receive rides, navigate trips and track daily earnings.",
-                 metric="1k+ downloads")
+                 )
 
 # slide 1: customer store card right / text left
 c1 = gradient_bg(clust_cus["tint"]).convert("RGBA")
