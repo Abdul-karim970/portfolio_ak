@@ -3,1164 +3,1066 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdul Karim | Senior Flutter Developer</title>
+  <title>Abdul Karim — Senior Flutter Developer | AI-Powered App Development</title>
+  <meta name="description" content="Senior Flutter Developer with 5+ years and 40+ apps published for iOS & Android. High-performance cross-platform apps with clean architecture, real-time backends and AI integration — 80k+ downloads.">
+  <meta name="theme-color" content="#f2f4fc">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="canonical" href="https://abdulkarim-portfolio.netlify.app/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Abdul Karim — Senior Flutter Developer | AI-Powered App Development">
+  <meta property="og:description" content="5+ years, 40+ apps published, 80k+ downloads. Cross-platform Flutter apps with clean architecture, real-time backends and AI integration.">
+  <meta property="og:url" content="https://abdulkarim-portfolio.netlify.app/">
+  <meta property="og:image" content="https://abdulkarim-portfolio.netlify.app/images/opt/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Abdul Karim — Senior Flutter Developer | AI-Powered App Development">
+  <meta name="twitter:description" content="40+ apps published, 80k+ downloads. AI-integrated, clean architecture, shipped to both stores.">
+  <meta name="twitter:image" content="https://abdulkarim-portfolio.netlify.app/images/opt/og-image.jpg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdul Karim",
+    "jobTitle": "Senior Flutter Developer",
+    "description": "Senior Flutter Developer building AI-integrated, cross-platform mobile apps for iOS and Android.",
+    "email": "mailto:abdulkarim3974@gmail.com",
+    "telephone": "+923057099816",
+    "address": { "@type": "PostalAddress", "addressLocality": "Lahore", "addressCountry": "PK" },
+    "url": "https://abdulkarim-portfolio.netlify.app/",
+    "sameAs": ["https://www.linkedin.com/in/abdulkarim-developer"],
+    "knowsAbout": ["Flutter", "Dart", "AI Integration", "Firebase", "Clean Architecture", "BLoC", "Riverpod"]
+  }
+  </script>
 </head>
 <body>
-  <!-- Header -->
+
+  <!-- ============ Animated light-glass background ============ -->
+  <div class="bg-scene" aria-hidden="true">
+    <div class="plx" data-depth="26"><div class="bg-blob bg-blob--1"></div></div>
+    <div class="plx" data-depth="-34"><div class="bg-blob bg-blob--2"></div></div>
+    <div class="plx" data-depth="18"><div class="bg-blob bg-blob--3"></div></div>
+    <div class="plx" data-depth="-22"><div class="bg-blob bg-blob--4"></div></div>
+    <div class="bg-grid"></div>
+    <div class="bg-noise"></div>
+  </div>
+  <div class="scroll-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <!-- ============ Header ============ -->
   <header class="header" id="header">
     <div class="container header__inner">
-      <a href="#hero" class="header__logo">AK</a>
-      <nav class="header__nav">
-        <a href="#hero" class="header__link">Home</a>
-        <a href="#skills" class="header__link">Skills</a>
-        <a href="#experience" class="header__link">Experience</a>
+      <a href="#home" class="header__logo" aria-label="Abdul Karim — home">
+        <span class="header__logo-mark">AK</span>
+        <span class="header__logo-text">Abdul&nbsp;Karim<span class="header__logo-dot">.</span></span>
+      </a>
+      <nav class="header__nav" id="navMenu" aria-label="Primary">
+        <span class="nav-glider" aria-hidden="true"></span>
+        <a href="#about" class="header__link">About</a>
         <a href="#services" class="header__link">Services</a>
-        <a href="#projects" class="header__link">Projects</a>
-        <a href="#contact" class="btn btn--primary header__nav-cta">Contact Me</a>
+        <a href="#ai" class="header__link">AI</a>
+        <a href="#experience" class="header__link">Experience</a>
+        <a href="#work" class="header__link">Work</a>
+        <a href="#contact" class="btn btn--primary header__nav-cta">Hire Me</a>
       </nav>
-      <button class="header__menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <a href="#contact" class="btn btn--primary header__cta">Hire Me</a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" aria-pressed="false">
+        <svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+      <button class="header__menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-      <a href="#contact" class="btn btn--primary header__cta">Contact Me</a>
     </div>
   </header>
 
-  <!--Hero Section-->
-  <section class="hero" id="hero">
-    <div class="hero__bg"></div>
-    <div class="container hero__inner">
-      <div class="hero__content">
-        <h1 class="hero__heading">
-          <span class="hero__title">I'm Abdul Karim</span>
-          <span class="hero__subtitle hero__subtitle--accent">Senior Flutter Developer</span>
+  <main>
+    <!-- ============ Hero ============ -->
+    <section class="hero hero--v2" id="home">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <div class="hero__badge" data-reveal>
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            Available for new projects
+          </div>
+          <h1 class="hero__heading" data-reveal style="--d:.08s">
+            <span class="hero__title">Abdul Karim</span>
+            <span class="hero__typing-row">
+              <span class="hero__typing" id="typing" aria-live="polite">Senior Flutter Developer</span><span class="hero__caret" aria-hidden="true"></span>
+            </span>
+          </h1>
+          <p class="hero__text" data-reveal style="--d:.16s">
+            I build and ship <strong>production-grade Flutter applications</strong> for
+            iOS and Android, backed by <strong>5+ years of experience</strong> and
+            <strong>40+ published apps</strong>. My work combines robust mobile engineering with
+            <strong>modern AI capabilities</strong>, including <strong>LLM-powered assistants</strong>,
+            <strong>AI integrations</strong>, <strong>on-device intelligence</strong>, and
+            <strong>real-time backend systems</strong>.
+          </p>
+          <div class="hero__actions" data-reveal style="--d:.24s">
+            <a href="#contact" class="btn btn--primary btn--lg">
+              Start a Project
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="resume.pdf" target="_blank" rel="noopener" class="btn btn--glass btn--lg">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Résumé
+            </a>
+          </div>
+          <dl class="hero__stats" data-reveal style="--d:.32s">
+            <div class="hero__stat glass"><dt>Years experience</dt><dd><span data-count="5">0</span>+</dd></div>
+            <div class="hero__stat glass"><dt>Apps published</dt><dd><span data-count="40">0</span>+</dd></div>
+            <div class="hero__stat glass"><dt>Downloads</dt><dd><span data-count="80">0</span>k+</dd></div>
+          </dl>
+        </div>
 
-        </h1>
-        <p class="hero__text">
-          Senior Flutter Developer with <strong>5+ years of experience</strong> and <strong>40+ production-ready apps</strong> for iOS & Android. I build high-performance, scalable apps with clean architecture and responsive UI. Specialized in seamless cross-platform functionality and robust user-centric solutions.
+        <div class="hv-visual" data-reveal style="--d:.18s">
+          <div class="hv-glow" aria-hidden="true"></div>
+          <div class="hv-card">
+            <div class="hv-layer hv-layer--back" aria-hidden="true"></div>
+            <img src="images/opt/hero.webp" alt="Abdul Karim — Senior Flutter Developer" class="hv-photo" width="770" height="1000" fetchpriority="high">
+            <div class="hv-layer hv-layer--front" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marquee glass" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Flutter</span><i>◆</i><span>Dart</span><i>◆</i><span>BLoC</span><i>◆</i><span>Riverpod</span><i>◆</i><span>Provider</span><i>◆</i><span>GetX</span><i>◆</i><span>Firebase</span><i>◆</i><span>REST APIs</span><i>◆</i><span>Agora RTC</span><i>◆</i><span>Google Maps</span><i>◆</i><span>Geofencing</span><i>◆</i><span>Flame</span><i>◆</i><span>Hive</span><i>◆</i><span>OpenAI API</span><i>◆</i><span>Gemini API</span><i>◆</i><span>ML Kit</span><i>◆</i><span>CI/CD</span><i>◆</i><span>In-App Purchases</span><i>◆</i>
+          <span>Flutter</span><i>◆</i><span>Dart</span><i>◆</i><span>BLoC</span><i>◆</i><span>Riverpod</span><i>◆</i><span>Provider</span><i>◆</i><span>GetX</span><i>◆</i><span>Firebase</span><i>◆</i><span>REST APIs</span><i>◆</i><span>Agora RTC</span><i>◆</i><span>Google Maps</span><i>◆</i><span>Geofencing</span><i>◆</i><span>Flame</span><i>◆</i><span>Hive</span><i>◆</i><span>OpenAI API</span><i>◆</i><span>Gemini API</span><i>◆</i><span>ML Kit</span><i>◆</i><span>CI/CD</span><i>◆</i><span>In-App Purchases</span><i>◆</i>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ About ============ -->
+    <section class="section about" id="about">
+      <div class="container about__inner">
+        <div class="about__visual" data-reveal>
+          <div class="about__frame glass">
+            <img src="images/opt/about.webp" alt="Abdul Karim" class="about__photo" width="466" height="640" loading="lazy">
+          </div>
+          <div class="about__badge glass" aria-hidden="true">
+            <strong>Lahore, Pakistan</strong>
+            <span>working worldwide</span>
+          </div>
+        </div>
+        <div class="about__content" data-reveal style="--d:.1s">
+          <h2 class="section-heading">ABOUT ME</h2>
+          <h3 class="about__subheading">Meet the <span class="gradient-text">Senior Flutter Developer</span> behind the screen, building apps with passion and precision.</h3>
+<p class="about__text">
+  As a <strong>Senior Flutter Developer</strong>, I specialize in building high-performance,
+  feature-rich mobile applications for iOS and Android across <strong>taxi and ride-hailing</strong>,
+  <strong>travel and booking</strong>, <strong>e-commerce and delivery</strong>,
+  <strong>telemedicine</strong>, and <strong>CCTV monitoring</strong>. My production work also
+  incorporates practical AI capabilities, including <strong>AI-driven driver matching and ETA prediction</strong>
+  in ride-hailing platforms, <strong>face detection, passenger head-counting, and predictive bus ETAs</strong>
+  in travel applications, <strong>AI-assisted symptom triage</strong> in telemedicine solutions,
+  and <strong>intelligent person and vehicle detection</strong> in CCTV monitoring systems,
+  along with <strong>AI-powered smart replies</strong> where relevant.
+</p>
+          <p class="about__text">
+            I am proficient in <strong>Flutter &amp; Dart</strong>, implementing <strong>clean architecture</strong> and
+            state management solutions such as <strong>BLoC</strong>, <strong>Provider</strong>, <strong>Riverpod</strong> and
+            <strong>GetX</strong>. I have extensive experience integrating <strong>RESTful APIs</strong>,
+            <strong>Firebase services</strong>, <strong>Google Maps API</strong>, <strong>Google Map tracking and Geofencing</strong>,
+            <strong>Flame</strong>, <strong>Google Mobile Ads</strong>, <strong>third-party SDKs</strong>, and modern
+            <strong>AI stacks</strong> — <strong>OpenAI and Gemini APIs</strong> with <strong>function calling</strong> and
+            <strong>streaming chat UIs</strong>, plus <strong>ML Kit</strong> and <strong>TensorFlow Lite</strong> for
+            <strong>on-device intelligence</strong> — always focused on delivering scalable, maintainable, and
+            production-ready solutions.
+          </p>
+          <p class="about__text">
+            I'm driven by a desire to deliver innovative solutions and collaborate closely with clients
+            to transform their visions into digital reality. I also mentor junior developers, review code,
+            and work directly with clients from kickoff to store release.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Services bento ============ -->
+    <section class="section services" id="services">
+      <div class="container">
+        <h2 class="section-heading section-heading--centered" data-reveal>WHAT I DO</h2>
+        <p class="section-subheading section-subheading--centered" data-reveal style="--d:.06s">
+          Senior Flutter engineering with an AI edge — from first wireframe to store release.
         </p>
-        <div class="hero__actions">
-          <a href="/resume.pdf" download="Abdul_Karim_Senior_Flutter_Developer_Resume.pdf" class="btn btn--primary hero__cta">
-            <svg class="hero__cta-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-              <polyline points="7 10 12 15 17 10"/>
-              <line x1="12" y1="15" x2="12" y2="3"/>
-            </svg>
-            Download Resume
-          </a>
-          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn--secondary hero__cta">
-            <svg class="hero__cta-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-              <circle cx="12" cy="12" r="3"/>
-            </svg>
-            View Resume
-          </a>
-        </div>
-      </div>
-      <div class="hero__image-wrapper">
-        <img src="images/image.png" alt="Abdul Karim" class="hero__image">
-      </div>
-    </div>
-  </section>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="container about__inner">
-      <div class="about__image-wrapper reveal reveal--left" style="--delay: 0s">
-        <div class="about__frame">
-          <div class="about__image-bg">
-            <img src="images/image_flip.jpeg" alt="Abdul Karim" class="about__image">
-          </div>
+        <div class="bento">
+          <article class="bento__tile bento__tile--ai glass tilt" data-reveal>
+            <span class="bento__tag">Flagship</span>
+            <h3 class="bento__title">AI-Integrated App Development</h3>
+            <p class="bento__desc">Ordinary apps are becoming smart. I integrate LLM assistants, streaming chat, smart replies and on-device intelligence directly into Flutter products — private, fast and production-safe.</p>
+            <div class="ai-demo" aria-hidden="true">
+              <div class="ai-demo__msg ai-demo__msg--user">Summarize today's orders</div>
+              <div class="ai-demo__msg ai-demo__msg--bot">
+                <span class="ai-demo__dots"><i></i><i></i><i></i></span>
+                <span class="ai-demo__reply">32 orders · 4 delayed · suggest rerouting 2 drivers</span>
+              </div>
+            </div>
+            <div class="pill-row">
+              <span class="pill pill--accent">OpenAI API</span><span class="pill pill--accent">Gemini API</span><span class="pill">Streaming Chat UI</span><span class="pill">ML Kit</span><span class="pill">TensorFlow Lite</span>
+            </div>
+          </article>
+
+          <article class="bento__tile glass tilt" data-reveal style="--d:.06s">
+            <div class="bento__icon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><line x1="9" y1="18.5" x2="15" y2="18.5"/></svg>
+            </div>
+            <h3 class="bento__title">Cross-Platform Flutter Apps</h3>
+            <p class="bento__desc">One codebase, two stores. High-performance iOS &amp; Android apps with native-feel animations and clean architecture.</p>
+          </article>
+
+          <article class="bento__tile bento__tile--stat glass tilt" data-reveal style="--d:.12s">
+            <span class="bento__stat-num"><span data-count="5">0</span>+</span>
+            <span class="bento__stat-label">Years of experience</span>
+          </article>
+
+          <article class="bento__tile bento__tile--stat glass tilt" data-reveal style="--d:.18s">
+            <span class="bento__stat-num"><span data-count="40">0</span>+</span>
+            <span class="bento__stat-label">Apps published</span>
+          </article>
+
+          <article class="bento__tile glass tilt" data-reveal style="--d:.1s">
+            <div class="bento__icon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+            </div>
+            <h3 class="bento__title">Pixel-Perfect UI from Figma</h3>
+            <p class="bento__desc">Design fidelity guaranteed — responsive layouts, custom animations and micro-interactions that match your designs exactly.</p>
+          </article>
+
+          <article class="bento__tile bento__tile--wide glass tilt" data-reveal style="--d:.16s">
+            <div class="bento__icon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
+            <h3 class="bento__title">Backend, Real-Time &amp; Maps</h3>
+            <p class="bento__desc">REST APIs, Firebase suite, Agora RTC video, live tracking and geofencing — the plumbing that makes apps feel alive.</p>
+            <div class="pill-row">
+              <span class="pill">Firestore</span><span class="pill">Cloud Functions</span><span class="pill">FCM</span><span class="pill">Live Tracking</span>
+            </div>
+          </article>
+
+          <article class="bento__tile bento__tile--stat glass tilt" data-reveal style="--d:.22s">
+            <span class="bento__stat-num"><span data-count="80">0</span>k+</span>
+            <span class="bento__stat-label">Total downloads</span>
+          </article>
+
+          <article class="bento__tile bento__tile--wide bento__tile--last glass tilt" data-reveal style="--d:.26s">
+            <div class="bento__icon" aria-hidden="true">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+            </div>
+            <div class="bento__tile-body">
+              <h3 class="bento__title">Launch, Monetize &amp; Scale</h3>
+              <p class="bento__desc">Play Console &amp; App Store releases, CI/CD pipelines, in-app purchases, payment gateways and ads — from build to revenue.</p>
+            </div>
+          </article>
         </div>
       </div>
-      <div class="about__content reveal reveal--right" style="--delay: 0.08s">
-        <h2 class="section-heading about__heading">
-          <span class="section-heading__line"></span>
-          ABOUT ME
-        </h2>
-        <h3 class="about__subheading">
-          Meet the <span class="gradient-text">Senior Flutter Developer</span> behind the screen, building apps with passion and precision.
-        </h3>
-       
-          <p class="about__text">As a <strong>Senior Flutter Developer</strong>, I specialize in creating high-performance, feature-rich mobile applications for iOS and Android. My expertise includes building <strong>Taxi and ride-hailing apps</strong>, <strong>Travel and booking apps</strong>, <strong>Social media apps</strong>, <strong>E-commerce apps</strong>, <strong>Video streaming apps</strong>, <strong>Audio player apps</strong>, <strong>CCTV monitoring apps</strong>, and other interactive applications with smooth user experience and responsive design.</p>
-  
-  <p class="about__text">I am proficient in <strong>Flutter & Dart</strong>, implementing <strong>clean architecture</strong> and state management solutions such as <strong>BLoC, Provider, Riverpod and GetX</strong>. I have extensive experience integrating <strong>RESTful APIs</strong>, <strong>Firebase services</strong>, <strong>Google Maps API</strong>, <strong>Google Map tracking and Geofencing</strong>, <strong>Flame</strong>, <strong>Google Mobile Ads</strong>, <strong>third-party SDKs</strong>, and I focus on delivering scalable, maintainable, and production-ready solutions.</p>
-        <p class="about__text">
-          I'm driven by a desire to deliver innovative solutions and collaborate closely with clients to transform their visions into digital reality.
+    </section>
+
+    <!-- ============ AI spotlight ============ -->
+    <section class="section ai" id="ai">
+      <div class="container">
+        <h2 class="section-heading section-heading--centered" data-reveal>FLUTTER × AI</h2>
+        <p class="section-subheading section-subheading--centered" data-reveal style="--d:.06s">
+          The market is moving from reactive screens to intelligent products. I build both halves of that shift.
         </p>
-        <div class="about__buttons">
-          <a href="#contact" class="btn btn--primary">HIRE ME NOW</a>
+        <div class="ai__grid">
+          <article class="ai__card glass tilt" data-reveal>
+            <div class="ai__card-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8"/><path d="M8 13h5"/></svg>
+            </div>
+            <h3>AI Chat &amp; Copilots</h3>
+            <p>In-app assistants powered by OpenAI, Gemini or Claude APIs — streaming responses, conversation memory, voice input and graceful offline states, built in Flutter. Live in products like Clodocs (AI symptom triage) and Fillao (AI smart replies).</p>
+          </article>
+          <article class="ai__card glass tilt" data-reveal style="--d:.08s">
+            <div class="ai__card-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/><path d="M9 2v2"/><path d="M15 2v2"/><path d="M9 20v2"/><path d="M15 20v2"/><path d="M2 9h2"/><path d="M2 15h2"/><path d="M20 9h2"/><path d="M20 15h2"/></svg>
+            </div>
+            <h3>On-Device Intelligence</h3>
+            <p>Private, low-latency features with ML Kit and TensorFlow Lite — text recognition, speech-to-text, image classification and smart recommendations that run offline. Powering person &amp; vehicle detection in Flynet Security and face-detection boarding head-counts in Safrly.</p>
+          </article>
+          <article class="ai__card glass tilt" data-reveal style="--d:.16s">
+            <div class="ai__card-icon" aria-hidden="true">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+            </div>
+            <h3>AI-Accelerated Delivery</h3>
+            <p>I use AI tooling across my own workflow — design-to-code scaffolding, generated test coverage and smarter debugging — shipping cleaner apps in less time.</p>
+          </article>
+        </div>
+        <div class="process" data-reveal>
+          <div class="process__step glass"><span>01</span><strong>Discover</strong><em>requirements, users, success metrics</em></div>
+          <div class="process__arrow" aria-hidden="true">→</div>
+          <div class="process__step glass"><span>02</span><strong>Architect</strong><em>clean, scalable structure</em></div>
+          <div class="process__arrow" aria-hidden="true">→</div>
+          <div class="process__step glass"><span>03</span><strong>Build &amp; Integrate</strong><em>Flutter, APIs, AI features</em></div>
+          <div class="process__arrow" aria-hidden="true">→</div>
+          <div class="process__step glass"><span>04</span><strong>Launch &amp; Scale</strong><em>store release, CI/CD, monitoring</em></div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Skills Section -->
-  <section class="skills reveal" id="skills">
-    <div class="container skills__content">
-      <h2 class="section-heading section-heading--centered reveal reveal--up" style="--delay: 0s">
-        MY SKILL SET
-      </h2>
-      <p class="section-subheading reveal reveal--up" style="--delay: 0.06s">Expertise & Proficiency: Flutter Development and UI/UX Design</p>
-      <div class="skills__grid">
-  <div class="skills__column reveal reveal--left" style="--delay: 0.12s">
-    <div class="skills__category">
-      <h4 class="skills__category-title">Languages</h4>
-      <p class="skills__items">
-        <span class="skills__highlight">Dart</span>, 
-        <span class="skills__highlight">Java</span>, 
-        <span class="skills__highlight">Kotlin</span>
-      </p>
-      <div class="skills__progress"><span class="skills__progress-fill" style="width: 95%"></span></div>
-    </div>
-    <div class="skills__category">
-      <h4 class="skills__category-title">Framework</h4>
-      <p class="skills__items">
-        <span class="skills__highlight">Flutter</span>, 
-        <span class="skills__highlight">Android Native</span>,
-        <span class="skills__highlight">Flame</span>
-      </p>
-      <div class="skills__progress"><span class="skills__progress-fill" style="width: 90%"></span></div>
-    </div>
-  <div class="skills__category">
-  <h4 class="skills__category-title">State Management</h4>
-  <p class="skills__items">
-       <span class="skills__highlight">BLoC</span>, 
-    <span class="skills__highlight">Riverpod</span>, 
-     <span class="skills__highlight">Provider</span>, 
-    <span class="skills__highlight">GetX</span>
-  </p>
-  <div class="skills__progress"><span class="skills__progress-fill" style="width: 85%"></span></div>
-</div>
-
-    <div class="skills__category">
-      <h4 class="skills__category-title">Backend & APIs</h4>
-      <p class="skills__items">
-        <span class="skills__highlight">REST APIs</span>, 
-        <span class="skills__highlight">Firebase Auth</span>, 
-        <span class="skills__highlight">Firestore</span>, 
-        <span class="skills__highlight">Realtime Database</span>, 
-        <span class="skills__highlight">Cloud Functions</span>, 
-        <span class="skills__highlight">FCM</span>
-      </p>
-      <div class="skills__progress"><span class="skills__progress-fill" style="width: 88%"></span></div>
-    </div>
-    <div class="skills__category">
-      <h4 class="skills__category-title">Real-Time & Media</h4>
-      <p class="skills__items">
-        <span class="skills__highlight">Agora RTC</span>, 
-        <span class="skills__highlight">Video Calling</span>, 
-        <span class="skills__highlight">Live Streaming</span>
-      </p>
-      <div class="skills__progress"><span class="skills__progress-fill" style="width: 85%"></span></div>
-    </div>
-  </div>
-
-  <div class="skills__column reveal reveal--right" style="--delay: 0.12s">
-    <div class="skills__category">
-      <h4 class="skills__category-title">Maps & Location</h4>
-      <p class="skills__items">
-        <span class="skills__highlight">Google Maps</span>, 
-        <span class="skills__highlight">Location Services</span>,
-        <span class="skills__highlight">Live tracking</span>,
-        <span class="skills__highlight">Geofencing</span>
-      </p>
-      <div class="skills__progress"><span class="skills__progress-fill" style="width: 85%"></span></div>
-    </div>
-    <div class="skills__category">
-      <h4 class="skills__category-title">Architecture</h4>
-      <p class="skills__items">
-        <span class="skills__highlight">MVC</span>, 
-        <span class="skills__highlight">Clean Architecture</span>, 
-       
-      </p>
-      <div class="skills__progress"><span class="skills__progress-fill" style="width: 82%"></span></div>
-    </div>
-    <div class="skills__category">
-      <h4 class="skills__category-title">Payments</h4>
-      <p class="skills__items">
-        <span class="skills__highlight">In-App Purchases</span>, 
-        <span class="skills__highlight">Payment Gateway Integrations</span>,
-        <span class="skills__highlight">Google Mobile Ads</span>
-      </p>
-      <div class="skills__progress"><span class="skills__progress-fill" style="width: 80%"></span></div>
-    </div>
-    <div class="skills__category">
-      <h4 class="skills__category-title">Tools & Platforms</h4>
-      <p class="skills__items">
-        <span class="skills__highlight">GitHub</span>, 
-        <span class="skills__highlight">Google Play Console</span>, 
-        <span class="skills__highlight">App Store Connect</span>,
-        <span class="skills__highlight">Jira</span>,
-        <span class="skills__highlight">CI/CD pipelines</span>
-      </p>
-      <div class="skills__progress"><span class="skills__progress-fill" style="width: 90%"></span></div>
-    </div>
-    <div class="skills__category">
-      <h4 class="skills__category-title">Other</h4>
-      <p class="skills__items">
-        <span class="skills__highlight">Flutter Animations</span>, 
-        <span class="skills__highlight">Platform Channels</span>, 
-        <span class="skills__highlight">Realm Local Database</span>
-        <span class="skills__highlight">Hive Local Database</span>
-      </p>
-      <div class="skills__progress"><span class="skills__progress-fill" style="width: 85%"></span></div>
-    </div>
-  </div>
-</div>
-
-    <div class="stats reveal" id="experience">
-      <div class="stats__bg"></div>
-      <div class="container stats__inner">
-        <div class="stats__item reveal reveal--up" style="--delay: 0s">
-          <div class="stats__icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-              <line x1="16" y1="2" x2="16" y2="6"/>
-              <line x1="8" y1="2" x2="8" y2="6"/>
-              <line x1="3" y1="10" x2="21" y2="10"/>
-            </svg>
-          </div>
-          <span class="stats__number">5+</span>
-          <span class="stats__label">Years of Experience</span>
-          <p class="stats__details">Delivering production Flutter apps with clean architecture, performance focus, and great UX.</p>
+    <!-- ============ Skills ============ -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <h2 class="section-heading section-heading--centered" data-reveal>TECHNOLOGY STACK</h2>
+        <p class="section-subheading section-subheading--centered" data-reveal style="--d:.06s">
+          Tools I use daily to take products from idea to store.
+        </p>
+        <div class="skills__grid">
+          <article class="skills__card glass tilt" data-reveal>
+            <h3 class="skills__cat">Core Mobile</h3>
+            <div class="pill-row">
+              <span class="pill pill--accent">Flutter</span><span class="pill">Dart</span><span class="pill">Android Native</span><span class="pill">Java</span><span class="pill">Kotlin</span><span class="pill">Flame</span>
+            </div>
+          </article>
+          <article class="skills__card glass tilt" data-reveal style="--d:.05s">
+            <h3 class="skills__cat">Architecture &amp; State</h3>
+            <div class="pill-row">
+              <span class="pill pill--accent">BLoC</span><span class="pill">Riverpod</span><span class="pill">Provider</span><span class="pill">GetX</span><span class="pill">Clean Architecture</span><span class="pill">MVC</span>
+            </div>
+          </article>
+          <article class="skills__card glass tilt" data-reveal style="--d:.1s">
+            <h3 class="skills__cat">Backend &amp; Real-Time</h3>
+            <div class="pill-row">
+              <span class="pill pill--accent">Firebase</span><span class="pill">REST APIs</span><span class="pill">WebSockets</span><span class="pill">Agora RTC</span><span class="pill">Cloud Functions</span><span class="pill">FCM</span>
+            </div>
+          </article>
+          <article class="skills__card glass tilt" data-reveal style="--d:.15s">
+            <h3 class="skills__cat">AI &amp; ML Integration</h3>
+            <div class="pill-row">
+              <span class="pill pill--accent">OpenAI API</span><span class="pill">Gemini API</span><span class="pill">Streaming Chat UI</span><span class="pill">Function Calling</span><span class="pill">ML Kit</span><span class="pill">TensorFlow Lite</span><span class="pill">Speech-to-Text</span>
+            </div>
+          </article>
+          <article class="skills__card glass tilt" data-reveal style="--d:.2s">
+            <h3 class="skills__cat">Testing &amp; Quality</h3>
+            <div class="pill-row">
+              <span class="pill pill--accent">Unit &amp; Widget Tests</span><span class="pill">Integration Tests</span><span class="pill">mockito</span><span class="pill">DevTools Profiling</span><span class="pill">Code Review</span>
+            </div>
+          </article>
+          <article class="skills__card glass tilt" data-reveal style="--d:.25s">
+            <h3 class="skills__cat">CI/CD &amp; Release</h3>
+            <div class="pill-row">
+              <span class="pill pill--accent">GitHub Actions</span><span class="pill">Codemagic</span><span class="pill">Fastlane</span><span class="pill">Play Console</span><span class="pill">App Store Connect</span>
+            </div>
+          </article>
+          <article class="skills__card glass tilt" data-reveal style="--d:.3s">
+            <h3 class="skills__cat">Data &amp; Codegen</h3>
+            <div class="pill-row">
+              <span class="pill pill--accent">Hive</span><span class="pill">Realm</span><span class="pill">Drift / SQLite</span><span class="pill">freezed</span><span class="pill">json_serializable</span><span class="pill">get_it · injectable</span>
+            </div>
+          </article>
+          <article class="skills__card glass tilt" data-reveal style="--d:.35s">
+            <h3 class="skills__cat">Maps, Money &amp; Ops</h3>
+            <div class="pill-row">
+              <span class="pill pill--accent">Google Maps</span><span class="pill">Geofencing</span><span class="pill">In-App Purchases</span><span class="pill">Payment Gateways</span><span class="pill">Google Mobile Ads</span><span class="pill">Localization (i18n)</span><span class="pill">Crashlytics · Sentry</span>
+            </div>
+          </article>
         </div>
-        <div class="stats__item reveal reveal--up" style="--delay: 0.08s">
-          <div class="stats__icon">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
-            </svg>
+      </div>
+    </section>
+
+    <!-- ============ Experience ============ -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <h2 class="section-heading section-heading--centered" data-reveal>EXPERIENCE</h2>
+        <p class="section-subheading section-subheading--centered" data-reveal style="--d:.06s">
+          Five years of shipping — from native Android to AI-era Flutter.
+        </p>
+        <ol class="timeline">
+          <li class="timeline__item" data-reveal>
+            <div class="timeline__meta">
+              <span class="timeline__when">Oct 2025 — Present</span>
+              <span class="timeline__where">A2Z Innovation</span>
+            </div>
+            <div class="timeline__card glass">
+              <h3 class="timeline__role">Senior Flutter Developer</h3>
+              <p class="timeline__desc">Building complex mobile workflows across <strong>Safrly</strong> (Parent &amp; Driver school transport, Saudi Arabia), <strong>Thardi</strong> (User &amp; Driver cargo logistics), a travel &amp; booking app and <strong>Flynet Security</strong> — shipping on-device AI into production: person &amp; vehicle detection in Flynet (TensorFlow Lite) and ML Kit boarding head-counts with AI-predicted bus ETAs in Safrly, on BLoC, REST APIs, Firebase and FCM at production scale.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">Firebase</span><span class="pill pill--accent">TensorFlow Lite</span><span class="pill">ML Kit</span></div>
+            </div>
+          </li>
+          <li class="timeline__item" data-reveal style="--d:.06s">
+            <div class="timeline__meta">
+              <span class="timeline__when">May 2023 — Sep 2025</span>
+              <span class="timeline__where">CodePul</span>
+            </div>
+            <div class="timeline__card glass">
+              <h3 class="timeline__role">Senior Flutter Developer</h3>
+              <p class="timeline__desc">Shipped large-scale Flutter releases across the <strong>Clust</strong> ride-hailing platform (Driver &amp; Customer — 10k+ downloads), <strong>KollySM</strong> e-commerce &amp; delivery, <strong>Clodocs</strong> telemedicine and <strong>Fillao</strong> — with AI built into the products: AI driver matching &amp; ETA prediction in Clust, recommendations in KollySM, symptom triage in Clodocs and smart replies in Fillao — using BLoC, Provider, Riverpod and GetX.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill pill--accent">AI Features</span><span class="pill">Riverpod</span><span class="pill">GetX</span><span class="pill">Google Maps</span></div>
+            </div>
+          </li>
+          <li class="timeline__item" data-reveal style="--d:.12s">
+            <div class="timeline__meta">
+              <span class="timeline__when">May 2021 — Apr 2023</span>
+              <span class="timeline__where">CAS — Center for Advance Solutions</span>
+            </div>
+            <div class="timeline__card glass">
+              <h3 class="timeline__role">Flutter Developer</h3>
+              <p class="timeline__desc">Led Flutter development with scalable architecture across <strong>Mehar's Kitchen</strong>, <strong>CAS ELMS</strong> and <strong>Invitor</strong>; integrated Firebase, REST APIs and payment gateways; mentored junior developers and ran code reviews.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">Provider</span><span class="pill">Payments</span><span class="pill">Mentoring</span></div>
+            </div>
+          </li>
+          <li class="timeline__item" data-reveal style="--d:.18s">
+            <div class="timeline__meta">
+              <span class="timeline__when">Jun 2020 — Apr 2021</span>
+              <span class="timeline__where">CAS — Center for Advance Solutions</span>
+            </div>
+            <div class="timeline__card glass">
+              <h3 class="timeline__role">Android Developer</h3>
+              <p class="timeline__desc">Built native Android apps in <strong>Java and Kotlin</strong> — UI, API integration and Google Play releases — before transitioning to Flutter for cross-platform delivery.</p>
+              <div class="pill-row"><span class="pill">Java</span><span class="pill">Kotlin</span><span class="pill">Android SDK</span></div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ Featured work (slideshows) ============ -->
+    <section class="section work" id="work">
+      <div class="container">
+        <h2 class="section-heading section-heading--centered" data-reveal>FEATURED WORK</h2>
+        <p class="section-subheading section-subheading--centered" data-reveal style="--d:.06s">
+          Flagship products — real screens, real users, real metrics.
+        </p>
+
+        <!-- Clust -->
+        <article class="featured" data-reveal>
+          <div class="featured__visual">
+            <div class="showcase" data-interval="4400">
+              <div class="showcase__frame glass">
+                <img src="images/showcase/clust_s1.webp" alt="Clust Customer — one-tap booking showcase" class="showcase__slide is-active" loading="lazy" width="1600" height="1000">
+                <img src="images/showcase/clust_s2.webp" alt="Clust Driver — trips and earnings showcase" class="showcase__slide" loading="lazy" width="1600" height="1000">
+                <img src="images/showcase/clust_s3.webp" alt="Clust — customer and driver apps together" class="showcase__slide" loading="lazy" width="1600" height="1000">
+                <button class="showcase__arrow showcase__arrow--prev" type="button" aria-label="Previous slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <button class="showcase__arrow showcase__arrow--next" type="button" aria-label="Next slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+              </div>
+              <div class="showcase__dots" role="tablist" aria-label="Clust slides"></div>
+            </div>
           </div>
-          <span class="stats__number">40+</span>
-          <span class="stats__label">Projects Done</span>
-          <p class="stats__details">From MVPs to scalable products — Firebase, REST APIs, state management, Google Maps API, Google Map tracking and Geofencing, third-party SDKs, and CI/CD pipelines.</p>
+          <div class="featured__content">
+            <span class="featured__kicker">Ride-hailing · Albania</span>
+            <h3 class="featured__title">Clust — Driver &amp; Customer</h3>
+            <span class="metric-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              10k+ downloads
+            </span>
+            <p class="featured__desc">Albania's ride-hailing platform, end to end: a passenger app that feels instant from request to arrival — one-tap booking, AI-matched drivers with predicted ETAs, fare estimates, live tracking, in-app chat — and a driver app with AI ride dispatch, navigation and daily earnings. Serving riders across Tirana, Durës, Vlorë and Sarandë.</p>
+            <div class="pill-row">
+              <span class="pill pill--accent">Flutter</span><span class="pill pill--accent">AI Matching</span><span class="pill">ETA Prediction</span><span class="pill">Firebase</span><span class="pill">Google Maps</span><span class="pill">Realtime DB</span>
+            </div>
+            <div class="store-row">
+              <a href="https://play.google.com/store/apps/details?id=com.clust.customer&hl=en" class="store-btn" target="_blank" rel="noopener noreferrer" aria-label="Clust Customer on Google Play">
+                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                <span class="store-btn__text"><span class="store-btn__label">Customer · Get it on</span><span class="store-btn__name">Google Play</span></span>
+              </a>
+              <a href="https://apps.apple.com/us/app/clust-app-taxi-app/id6475237375" class="store-btn" target="_blank" rel="noopener noreferrer" aria-label="Clust Customer on the App Store">
+                <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <span class="store-btn__text"><span class="store-btn__label">Customer · Download on</span><span class="store-btn__name">App Store</span></span>
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.clust.driver&hl=en" class="store-btn" target="_blank" rel="noopener noreferrer" aria-label="Clust Driver on Google Play">
+                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                <span class="store-btn__text"><span class="store-btn__label">Driver · Get it on</span><span class="store-btn__name">Google Play</span></span>
+              </a>
+              <a href="https://apps.apple.com/us/app/clust-driver/id6475630032" class="store-btn" target="_blank" rel="noopener noreferrer" aria-label="Clust Driver on the App Store">
+                <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <span class="store-btn__text"><span class="store-btn__label">Driver · Download on</span><span class="store-btn__name">App Store</span></span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Flynet -->
+        <article class="featured featured--flip" data-reveal>
+          <div class="featured__visual">
+            <div class="showcase" data-interval="4400">
+              <div class="showcase__frame glass">
+                <img src="images/showcase/flynet_s1.webp" alt="Flynet Security — live camera streams showcase" class="showcase__slide is-active" loading="lazy" width="1600" height="1000">
+                <img src="images/showcase/flynet_s2.webp" alt="Flynet Security — 24/7 monitoring showcase" class="showcase__slide" loading="lazy" width="1600" height="1000">
+                <img src="images/showcase/flynet_s3.webp" alt="Flynet Security — every camera in one app showcase" class="showcase__slide" loading="lazy" width="1600" height="1000">
+                <button class="showcase__arrow showcase__arrow--prev" type="button" aria-label="Previous slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <button class="showcase__arrow showcase__arrow--next" type="button" aria-label="Next slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+              </div>
+              <div class="showcase__dots" role="tablist" aria-label="Flynet slides"></div>
+            </div>
+          </div>
+          <div class="featured__content">
+            <span class="featured__kicker">Enterprise Security</span>
+            <h3 class="featured__title">Flynet Security</h3>
+            <span class="metric-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+              Enterprise-grade
+            </span>
+            <p class="featured__desc">CCTV monitoring for security teams that can't afford blind spots. Live camera streams, recording during active watches, and instant playback for investigations — with on-device AI detection (TensorFlow Lite) flagging people and vehicles on live feeds as they happen, across supported camera manufacturers, all in a BLoC-based Flutter architecture.</p>
+            <div class="pill-row">
+              <span class="pill pill--accent">Flutter</span><span class="pill">BLoC</span><span class="pill pill--accent">Object Detection</span><span class="pill">TensorFlow Lite</span><span class="pill">Video Streaming</span><span class="pill">Firebase</span>
+            </div>
+            <div class="store-row">
+              <a href="https://play.google.com/store/apps/details?id=fc.flynet.me" class="store-btn" target="_blank" rel="noopener noreferrer" aria-label="Flynet Security on Google Play">
+                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Safrly -->
+        <article class="featured" data-reveal>
+          <div class="featured__visual">
+            <div class="showcase" data-interval="4400">
+              <div class="showcase__frame glass">
+                <img src="images/showcase/safrly_s1.webp" alt="Safrly Parent — live bus tracking showcase" class="showcase__slide is-active" loading="lazy" width="1600" height="1000">
+                <img src="images/showcase/safrly_s2.webp" alt="Safrly Driver — route management showcase" class="showcase__slide" loading="lazy" width="1600" height="1000">
+                <img src="images/showcase/safrly_s3.webp" alt="Safrly — parents and drivers in sync showcase" class="showcase__slide" loading="lazy" width="1600" height="1000">
+                <button class="showcase__arrow showcase__arrow--prev" type="button" aria-label="Previous slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <button class="showcase__arrow showcase__arrow--next" type="button" aria-label="Next slide">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+              </div>
+              <div class="showcase__dots" role="tablist" aria-label="Safrly slides"></div>
+            </div>
+          </div>
+          <div class="featured__content">
+            <span class="featured__kicker">School Transport · Saudi Arabia</span>
+            <h3 class="featured__title">Safrly — Parent &amp; Driver</h3>
+            <span class="metric-badge">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Bilingual · Arabic &amp; English
+            </span>
+            <p class="featured__desc">A student pick-and-drop platform connecting parents, drivers and admins. Live bus status with AI-predicted ETAs, ML Kit face-detection boarding head-counts, and route rosters in two apps with a fully bilingual Arabic/English experience — so families follow every school journey in real time.</p>
+            <div class="pill-row">
+              <span class="pill pill--accent">Flutter</span><span class="pill">Firebase</span><span class="pill">BLoC</span><span class="pill pill--accent">ML Kit</span><span class="pill">Live Tracking</span><span class="pill">REST APIs</span>
+            </div>
+            <div class="store-row">
+              <a href="https://play.google.com/store/apps/details?id=com.safrlyparent.azapp&hl=en" class="store-btn" target="_blank" rel="noopener noreferrer" aria-label="Safrly Parent on Google Play">
+                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                <span class="store-btn__text"><span class="store-btn__label">Parent · Get it on</span><span class="store-btn__name">Google Play</span></span>
+              </a>
+              <a href="https://apps.apple.com/us/app/safrly-parent/id6793082017" class="store-btn" target="_blank" rel="noopener noreferrer" aria-label="Safrly Parent on the App Store">
+                <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <span class="store-btn__text"><span class="store-btn__label">Parent · Download on</span><span class="store-btn__name">App Store</span></span>
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.safrlydriver.azapp&hl=en" class="store-btn" target="_blank" rel="noopener noreferrer" aria-label="Safrly Driver on Google Play">
+                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                <span class="store-btn__text"><span class="store-btn__label">Driver · Get it on</span><span class="store-btn__name">Google Play</span></span>
+              </a>
+              <a href="https://apps.apple.com/us/app/safrly-driver/id6793063868" class="store-btn" target="_blank" rel="noopener noreferrer" aria-label="Safrly Driver on the App Store">
+                <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                <span class="store-btn__text"><span class="store-btn__label">Driver · Download on</span><span class="store-btn__name">App Store</span></span>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ All projects ============ -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <h2 class="section-heading section-heading--centered" data-reveal>ALL PROJECTS</h2>
+        <p class="section-subheading section-subheading--centered" data-reveal style="--d:.06s">
+          A selection of shipped products — more available under NDA.
+        </p>
+
+        <div class="filters" data-reveal role="tablist" aria-label="Filter projects">
+          <button class="filter is-active" data-filter="all">All</button>
+          <button class="filter" data-filter="transport">Ride-hailing &amp; Transport</button>
+          <button class="filter" data-filter="commerce">Commerce &amp; Delivery</button>
+          <button class="filter" data-filter="business">Business &amp; Enterprise</button>
+          <button class="filter" data-filter="health">Health &amp; Education</button>
+          <button class="filter" data-filter="lifestyle">Games &amp; Lifestyle</button>
         </div>
-        
-      </div>
-    </div>
-  </section>
 
-  <!-- Services Section -->
-  <section class="services reveal" id="services">
-    <div class="services__bg"></div>
-    <div class="container services__inner">
-      <h2 class="section-heading section-heading--centered reveal reveal--up" style="--delay: 0s">
-        SERVICES
-      </h2>
-      <p class="section-subheading reveal reveal--up" style="--delay: 0.06s">
-       Building stunning & scalable Mobile Apps. Delivering High-Quality Flutter solutions tailored to your needs
-      </p>
-      <div class="services__grid">
-        <article class="services__card reveal reveal--left" style="--delay: 0.12s">
-          <span class="services__number">01.</span>
-          <div class="services__icon">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="2" y="3" width="20" height="14" rx="2"/>
-              <line x1="8" y1="21" x2="16" y2="21"/>
-              <line x1="12" y1="17" x2="12" y2="21"/>
-              <path d="M7 8h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/>
-            </svg>
-          </div>
-          <h3 class="services__title">Flutter Development</h3>
-          <p class="services__desc">Transforming your ideas into seamless mobile experiences through innovative app development with Flutter.</p>
-        </article>
-        <article class="services__card reveal reveal--right" style="--delay: 0.2s">
-          <span class="services__number">02.</span>
-          <div class="services__icon">
-            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <rect x="5" y="2" width="14" height="20" rx="2"/>
-              <line x1="12" y1="18" x2="12.01" y2="18"/>
-              <rect x="8" y="6" width="8" height="2" rx="0.5"/>
-              <rect x="8" y="10" width="5" height="2" rx="0.5"/>
-            </svg>
-          </div>
-          <h3 class="services__title">Flutter UI Development from Figma Design</h3>
-          <p class="services__desc">Transform your Figma design into a responsive and functional Flutter UI. Clean architecture, optimized performance, and design fidelity guaranteed.</p>
-        </article>
-      </div>
-    </div>
-  </section>
+        <div class="projects__grid" id="projectsGrid">
 
-  <!-- Projects Section -->
-  <section class="projects" id="projects">
-    <div class="container projects__inner">
-      <h2 class="section-heading section-heading--centered" style="--delay: 0s">
-        MY WORK SHOWCASE
-      </h2>
-      <p class="section-subheading" style="--delay: 0.06s">
-        Check out my projects, from experiments to finished creations, there's something for everyone!
-      </p>
-
-      <div class="projects__grid">
-
-        <article class="projects__card" style="--delay: 0.22s">
-          <div class="projects__card-thumb">
-            <img src="images/clust_driver.png" alt="Clust Driver">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Clust Driver</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Clust Driver</h3>
-            <p class="projects__card-desc">Clust Driver is the partner app for Albania's Clust taxi platform, built for drivers who want flexible local and intercity work. Drivers complete vehicle registration and verification, go online to receive requests, track passenger location, and communicate in-app for smoother pickups. They manage each trip through completion, review earnings by day or custom periods, handle wallet withdrawals, and switch between online and offline modes to control productive hours across major Albanian cities.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase Authentication</span>
-              <span class="projects__pill">Realtime Database</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">Provider</span>
-            </div>
-<div class="section-divider"></div>
-            
- 
-             <!-- <div class="projects__qr-codes">
-              <div class="projects__qr">
-                <img src="images/driver_play.png" alt="Play Store QR">
-                <span>Play Store</span>
+          <article class="pcard glass" data-cat="transport" data-reveal>
+            <div class="pcard__thumb"><img src="images/showcase/clust_s2.webp" alt="Clust Driver showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Clust Driver</h3>
+              <p>Driver-side app for Albania's Clust fleet — go online, receive AI-matched ride requests, navigate trips and track earnings &amp; wallet payouts.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">Firebase</span><span class="pill">Maps</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.clust.driver&hl=en" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Clust Driver on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
+                <a href="https://apps.apple.com/us/app/clust-driver/id6475630032" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Clust Driver on the App Store">
+                  <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Download on</span><span class="store-btn__name">App Store</span></span>
+                </a>
               </div>
-              <div class="projects__qr">
-                <img src="images/driver_apple.png" alt="App Store QR">
-                <span>App Store</span>
+            </div>
+          </article>
+
+          <article class="pcard glass" data-cat="transport" data-reveal style="--d:.04s">
+            <div class="pcard__thumb"><img src="images/showcase/clust_s1.webp" alt="Clust Customer showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Clust Customer</h3>
+              <p>Taxi booking with 10k+ downloads — AI-matched drivers with predicted ETAs, fare estimates, multi-stop trips, live tracking and cash or card payments.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">Firebase</span><span class="pill">Maps</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.clust.customer&hl=en" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Clust Customer on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
+                <a href="https://apps.apple.com/us/app/clust-app-taxi-app/id6475237375" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Clust Customer on the App Store">
+                  <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Download on</span><span class="store-btn__name">App Store</span></span>
+                </a>
               </div>
-            </div> -->
-            
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.clust.driver&hl=en" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
-              <a href="https://apps.apple.com/us/app/clust-driver/id6475630032" class="store-btn store-btn--apple" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
-                <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Download on the</span><span class="store-btn__name">App Store</span></span>
-              </a>
             </div>
+          </article>
 
-       
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.2s">
-          <div class="projects__card-thumb">
-            <img src="images/clust_customer.png" alt="Clust Customer">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Clust Customer</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Clust Customer</h3>
-            <p class="projects__card-desc">Clust Customer is Albania's taxi-booking app with 10k+ downloads, serving Tirana, Durres, Vlore, Sarande, and airport transfers. Passengers set pickup and drop-off points, review fare estimates before confirming, add multiple stops in one trip, and track drivers live with arrival estimates. In-app chat or calls help coordinate pickups, while cash or card payments, saved favorite places, ride history, and driver ratings keep commuting and tourist travel simple from booking through safe arrival.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase Authentication</span>
-              <span class="projects__pill">Realtime Database</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">Provider</span>
-            </div>
-            <div class="section-divider"></div>
-            
-<!--  
-             <div class="projects__qr-codes">
-              <div class="projects__qr">
-                <img src="images/clust_user_play.png" alt="Play Store QR">
-                <span>Play Store</span>
+          <article class="pcard glass" data-cat="transport" data-reveal style="--d:.08s">
+            <div class="pcard__thumb"><img src="images/showcase/safrly_s1.webp" alt="Safrly Parent showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Safrly Parent</h3>
+              <p>Live school-bus tracking for Saudi families — AI-predicted bus ETAs, trip alerts, boarding updates, Arabic/English support.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">Firebase</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.safrlyparent.azapp&hl=en" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Safrly Parent on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
+                <a href="https://apps.apple.com/us/app/safrly-parent/id6793082017" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Safrly Parent on the App Store">
+                  <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Download on</span><span class="store-btn__name">App Store</span></span>
+                </a>
               </div>
-              <div class="projects__qr">
-                <img src="images/clust_user_apple.png" alt="App Store QR">
-                <span>App Store</span>
+            </div>
+          </article>
+
+          <article class="pcard glass" data-cat="transport" data-reveal style="--d:.12s">
+            <div class="pcard__thumb"><img src="images/showcase/safrly_s2.webp" alt="Safrly Driver showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Safrly Driver</h3>
+              <p>Route management for school-bus drivers — rosters, ML Kit boarding head-counts and live location sharing.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">Firebase</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.safrlydriver.azapp&hl=en" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Safrly Driver on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
+                <a href="https://apps.apple.com/us/app/safrly-driver/id6793063868" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Safrly Driver on the App Store">
+                  <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Download on</span><span class="store-btn__name">App Store</span></span>
+                </a>
               </div>
-            </div> -->
-            
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.clust.customer&hl=en" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
-              <a href="https://apps.apple.com/us/app/clust-app-taxi-app/id6475237375" class="store-btn store-btn--apple" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
-                <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Download on the</span><span class="store-btn__name">App Store</span></span>
-              </a>
             </div>
-          
-          </div>
-        </article>
+          </article>
 
-        <article class="projects__card" style="--delay: 0.21s">
-          <div class="projects__card-thumb">
-            <img src="images/safrly_parent.png" alt="Safrly Parent">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Safrly Parent</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Safrly Parent</h3>
-            <p class="projects__card-desc">Safrly Parent keeps Saudi families connected to approved school transport for morning and evening routes. Parents add multiple children with school details, photos, and map pickup points, then follow live bus status and trip progress on active journeys. Notifications cover trip start, nearby bus, driver arrival, student boarding, and trip completion, plus assignment updates after approval. Attendance is present by default and can be marked absent when plans change, with Arabic and English support for clearer daily family coordination.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">Provider</span>
-              <span class="projects__pill">BLoC</span>
-            </div>
-            <div class="section-divider"></div>
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.safrlyparent.azapp&hl=en" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
-              <a href="https://apps.apple.com/us/app/safrly-parent/id6793082017" class="store-btn store-btn--apple" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
-                <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Download on the</span><span class="store-btn__name">App Store</span></span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.22s">
-          <div class="projects__card-thumb">
-            <img src="images/safrly_driver.png" alt="Safrly Driver">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Safrly Driver</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Safrly Driver</h3>
-            <p class="projects__card-desc">Safrly Driver helps approved school-bus drivers run morning and evening student routes with clear operational control. Drivers open assigned rosters, start trips, confirm arrivals and boardings on the route map, and share live location while trips are active so parents receive accurate progress updates. They can search students, review route details, and manage profiles after admin approval, with Arabic and English interfaces that keep school transport coordination practical and reliable every school day.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">Provider</span>
-              <span class="projects__pill">BLoC</span>
-            </div>
-            <div class="section-divider"></div>
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.safrlydriver.azapp&hl=en" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
-              <a href="https://apps.apple.com/us/app/safrly-driver/id6793063868" class="store-btn store-btn--apple" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
-                <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Download on the</span><span class="store-btn__name">App Store</span></span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.23s">
-          <div class="projects__card-thumb">
-            <img src="images/thardi_user.png" alt="Thardi User">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Thardi User</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Thardi User</h3>
-            <p class="projects__card-desc">Thardi User is a cargo logistics app for individuals, traders, SMEs, and enterprises that need reliable freight movement. Users book the right vehicle for a few cartons or a full truckload, then track shipments in real time from booking through final delivery. The product centralizes vehicle matching, load visibility, and delivery management so senders reduce phone coordination and keep stronger control over outbound and inbound shipments inside one clear mobile workflow.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">Provider</span>
-              <span class="projects__pill">BLoC</span>
-            </div>
-            <div class="section-divider"></div>
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.thardi.userapp&hl=en" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
-              <a href="https://apps.apple.com/us/app/thardi-user/id6749817787" class="store-btn store-btn--apple" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
-                <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Download on the</span><span class="store-btn__name">App Store</span></span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.24s">
-          <div class="projects__card-thumb">
-            <img src="images/thardi_driver.png" alt="Thardi Driver">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Thardi Driver</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Thardi Driver</h3>
-            <p class="projects__card-desc">Thardi Driver connects cargo drivers, transporters, and fleet partners with customers who need dependable goods transportation. Partners receive booking opportunities, manage active trips, update progress while on the road, and complete deliveries through a professional field workflow. The app helps increase trip volume, organize multiple jobs in one place, improve vehicle utilization, and deliver a smoother experience for shippers waiting on time-sensitive parcel and freight movement throughout the day. The experience stays focused on clarity, speed, and dependable day-to-day use.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">Provider</span>
-              <span class="projects__pill">BLoC</span>
-            </div>
-            <div class="section-divider"></div>
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.thardi.driverapp&hl=en" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
-              <a href="https://apps.apple.com/us/app/thardi-driver/id6749816503" class="store-btn store-btn--apple" target="_blank" rel="noopener noreferrer" aria-label="Download on the App Store">
-                <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Download on the</span><span class="store-btn__name">App Store</span></span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.245s">
-          <div class="projects__card-thumb">
-            <img src="images/messages.png" alt="Messages">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Messages</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Messages</h3>
-            <p class="projects__card-desc">Messages is a full-featured Android SMS app from VAREUP that can be set as the default messenger for sending and receiving texts, with dual-SIM support for choosing which line to use. Conversations show contact names and photos, and users can pin, archive, and star chats, keep drafts, search the inbox, and receive local notifications. Light and dark themes plus font-size options keep the interface comfortable, and friends can be invited from the app. A Locked tab is coming soon for PIN-protected conversations.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">BLoC</span>
-              <span class="projects__pill">Provider</span>
-              
-              <span class="projects__pill">go_router</span>
-            </div>
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.247s">
-          <div class="projects__card-thumb">
-            <img src="images/arrow_flow.png" alt="Arrow Flow">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Arrow Flow</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Arrow Flow</h3>
-            <p class="projects__card-desc">Arrow Flow is a grid puzzle. Splash leads to home, then level select. Tap an arrow to release it if its path to the board edge is clear; blocked taps cost one of three lives. Long-press rotatable arrows to turn them. Clear all arrows to earn stars. On game over, watch an ad to restore lives or restart. Two hundred silhouette levels unlock sequentially.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Flame</span>
-              <span class="projects__pill">Riverpod</span>
-              <span class="projects__pill">go_router</span>
-              <span class="projects__pill">Hive</span>
-              <span class="projects__pill">Google Mobile Ads</span>
-              <span class="projects__pill">flame_audio</span>
-              <span class="projects__pill">Firebase</span>
-            </div>
-            <div class="section-divider"></div>
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.arrowpuzzle.azgame" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
-            </div>
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.25s">
-          <div class="projects__card-thumb">
-            <img src="images/kollysm.png" alt="KollySM">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">KollySM</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">KollySM</h3>
-            <p class="projects__card-desc">KollySM is a multi-sided commerce platform covering online shopping and delivery fulfillment in one connected journey. Customers browse structured product catalogs, manage shopping carts carefully, and complete secure checkout with confidence. A dedicated delivery side then moves confirmed orders from store readiness to customer receipt. The product links discovery, purchase confirmation, and post-order logistics so retail and delivery stakeholders can follow progress without fragmented handoffs or unclear order status. The experience stays focused on clarity, speed, and dependable day-to-day use.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">Riverpod</span>
-            </div>
-<div class="section-divider"></div>
-            
- 
-             <!-- <div class="projects__qr-codes">
-              <div class="projects__qr">
-                <img src="images/qr_kollysm.png" alt="Play Store QR">
-                <span>Play Store</span>
+          <article class="pcard glass" data-cat="transport" data-reveal style="--d:.16s">
+            <div class="pcard__thumb"><img src="images/showcase/thardi_user_s1.webp" alt="Thardi User showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Thardi User</h3>
+              <p>Cargo booking for traders and SMEs — AI-matched vehicle selection by load &amp; distance, and shipment tracking to final delivery.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">Firebase</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.thardi.userapp&hl=en" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Thardi User on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
+                <a href="https://apps.apple.com/us/app/thardi-user/id6749817787" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Thardi User on the App Store">
+                  <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Download on</span><span class="store-btn__name">App Store</span></span>
+                </a>
               </div>
-           
-            </div> -->
-            
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.kollysm.customer.codepul" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
             </div>
+          </article>
 
-          
-          </div>
-        </article>
-
-        
-
-        <article class="projects__card" style="--delay: 0.3s">
-          <div class="projects__card-thumb">
-            <img src="images/clodoc.png" alt="Clodocs">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Clodocs</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Clodocs</h3>
-            <p class="projects__card-desc">Clodocs is a telemedicine platform that helps patients access doctors without unnecessary travel or waiting rooms. Users book appointments, join secure video consultations from home, and keep medical interaction history available for follow-up care. A typical flow starts with selecting care needs, reserving a slot, attending the live session, and reviewing records afterward, keeping remote healthcare structured, professional, and easier to continue across future visits. The experience stays focused on clarity, speed, and dependable day-to-day use.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">GetX</span>
-              <span class="projects__pill">Agora RTC</span>
-            </div>
-<div class="section-divider"></div>
-            
- 
-             <!-- <div class="projects__qr-codes">
-              <div class="projects__qr">
-                <img src="images/qr_clodoc.png" alt="Play Store QR">
-                <span>Play Store</span>
+          <article class="pcard glass" data-cat="transport" data-reveal style="--d:.2s">
+            <div class="pcard__thumb"><img src="images/showcase/thardi_driver_s1.webp" alt="Thardi Driver showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Thardi Driver</h3>
+              <p>Field app for cargo drivers and fleet partners — accept AI-suggested bookings, manage trips, raise vehicle utilization.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">Firebase</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.thardi.driverapp&hl=en" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Thardi Driver on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
+                <a href="https://apps.apple.com/us/app/thardi-driver/id6749816503" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Thardi Driver on the App Store">
+                  <svg class="store-btn__icon store-btn__icon--apple" viewBox="0 0 24 24" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 16.7 2.94 11.82 4.7 8.55c.87-1.66 2.43-2.71 4.12-2.74 1.28-.03 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.9M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Download on</span><span class="store-btn__name">App Store</span></span>
+                </a>
               </div>
-             
-            </div> -->
-            
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.clodocs.videocalling&hl=en" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
             </div>
+          </article>
 
-          
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.32s">
-          <div class="projects__card-thumb">
-            <img src="images/moov.png" alt="MOOV Forward">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">MOOV Forward</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">MOOV Forward</h3>
-            <p class="projects__card-desc">MOOV Forward helps people improve skills by booking private training in sports, business coaching, and educational tutoring. Learners find local or nationwide virtual coaches, view ready schedules, book sessions instantly, pay inside the app, and message trainers without sharing payment details directly. Sessions can happen in person or online, with scholarship-linked pathways for qualifying learners who want safer, structured progress toward clearer personal or professional skill goals. The experience stays focused on clarity, speed, and dependable day-to-day use.</p>
-            
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">Riverpod</span>
-            </div>
-<div class="section-divider"></div>
-            
- 
-             <!-- <div class="projects__qr-codes">
-              <div class="projects__qr">
-                <img src="images/qr_moov.png" alt="Play Store QR">
-                <span>Play Store</span>
+          <article class="pcard glass" data-cat="commerce" data-reveal>
+            <div class="pcard__thumb"><img src="images/showcase/kollysm_s1.webp" alt="KollySM showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>KollySM</h3>
+              <p>Multi-sided commerce platform — catalogs, personalized AI product recommendations, secure checkout, and a dedicated delivery fulfillment side.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">Riverpod</span><span class="pill">Firebase</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.kollysm.customer.codepul" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="KollySM on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
               </div>
-           
-            </div> -->
-            
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.moovforward.videocalling&hl=en" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
             </div>
+          </article>
 
-           
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.34s">
-          <div class="projects__card-thumb">
-            <img src="images/elms.png" alt="CAS ELMS">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">CAS ELMS</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">CAS ELMS</h3>
-            <p class="projects__card-desc">CAS ELMS is the student learning app for Center for Advance Studies in Bahawalpur. Students attempt daily quizzes, view weekly test and exam results quickly, and access profiles with photos, roll numbers, and fee history. Campus geofencing marks attendance on arrival, with monthly attendance logs plus alerts for exam schedules, institute announcements, and performance updates, so academics, attendance, and administrative records stay connected in one student journey. The experience stays focused on clarity, speed, and dependable day-to-day use.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">Geofencing</span>
-              <span class="projects__pill">BLoC</span>
-            </div>
-<div class="section-divider"></div>
-            
- 
-             <!-- <div class="projects__qr-codes">
-              <div class="projects__qr">
-                <img src="images/qr_elms.png" alt="Play Store QR">
-                <span>Play Store</span>
+          <article class="pcard glass" data-cat="commerce" data-reveal style="--d:.04s">
+            <div class="pcard__thumb"><img src="images/showcase/sweeft_cus_s1.webp" alt="Sweeft Customer showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Sweeft Customer</h3>
+              <p>Multi-vendor marketplace — bookings, orders and real-time delivery tracking under one account.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">Firebase</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.sweeftcd.user" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Sweeft Customer on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
               </div>
-            
-            </div> -->
-            
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.cas.elms&hl=en" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
             </div>
+          </article>
 
-           
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.36s">
-          <div class="projects__card-thumb">
-            <img src="images/inviter.png" alt="Invitor App">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Invitor App</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Invitor App</h3>
-            <p class="projects__card-desc">Invitor App helps hosts create and send animated digital invitation cards for celebrations and formal events. Users personalize event details, choose engaging card designs, and distribute invites to guests without relying on generic static messages. As guest lists grow, invitation outreach stays organized in one place, combining creative presentation with clear event context and smoother communication from the first draft through the final send to every recipient. The experience stays focused on clarity, speed, and dependable day-to-day use.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">BLoC</span>
-            </div>
-              <div class="section-divider"></div>
-            
- 
-             <!-- <div class="projects__qr-codes">
-              <div class="projects__qr">
-                <img src="images/qr_inviter.png" alt="Play Store QR">
-                <span>Play Store</span>
+          <article class="pcard glass" data-cat="commerce" data-reveal style="--d:.08s">
+            <div class="pcard__thumb"><img src="images/showcase/sw_dri_s1.webp" alt="Sweeft Driver showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Sweeft Driver</h3>
+              <p>Field app for Sweeft partners — assignments, navigation and clean delivery completion.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">Firebase</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.sweeftcd.driver" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Sweeft Driver on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
               </div>
-             
-            </div> -->
-            
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=pk.org.cas.invitor" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
             </div>
+          </article>
 
-           
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.4s">
-          <div class="projects__card-thumb">
-            <img src="images/iclock.png" alt="iClock">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">iClock</h3>
-            </div>
-          </div>
-          
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">iClock</h3>
-            <p class="projects__card-desc">iClock is an employee attendance and leave app designed for everyday workforce routines and clearer HR follow-up. Staff check in and out with location verification, apply for leave directly in the app, and review leave history without paper registers. The flow covers arrival, location verification, presence marking, leave requests, and historical tracking, reducing disputes and giving employees better visibility into their own attendance and leave status over time. The experience stays focused on clarity, speed, and dependable day-to-day use.</p>
-            
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">BLoC</span>
-            </div>
-            <div class="section-divider"></div>
-              <!-- <div class="projects__qr-codes">
-                <div class="projects__qr">
-                  <img src="images/qr_iclock.png" alt="Play Store QR">
-                  <span>Play Store</span>
-                </div>
-              </div> -->
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.mucode.iclock_app" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
-            </div>
-
-            
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.38s">
-          <div class="projects__card-thumb">
-            <img src="images/mehar.png" alt="Mehar’s Kitchen">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Mehar’s Kitchen</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Mehar’s Kitchen</h3>
-            <p class="projects__card-desc">Mehar's Kitchen is a food-ordering app for a Dubai-based kitchen brand focused on convenient mobile ordering. Customers browse menus, place orders quickly, and follow real-time delivery tracking after checkout until food arrives. The journey stays simple for returning customers: choose dishes, confirm the order, and monitor fulfillment status, supporting a modern ordering channel that reduces phone-based restaurant calls and keeps delivery progress easy to understand. The experience stays focused on clarity, speed, and dependable day-to-day use.</p>
-            
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">Provider</span>
-            </div>
-            <div class="section-divider"></div>
-            <!-- <div class="projects__qr-codes">
-              <div class="projects__qr">
-                <img src="images/qr_mehr.png" alt="Play Store QR">
-                <span>Play Store</span>
+          <article class="pcard glass" data-cat="commerce" data-reveal style="--d:.12s">
+            <div class="pcard__thumb"><img src="images/showcase/sweeft_store_s1.webp" alt="Sweeft Store showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Sweeft Store</h3>
+              <p>Vendor console — catalogs, inventory, order intake and fulfillment handoff in one place.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">Firebase</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.sweeftcd.store" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Sweeft Store on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
               </div>
-            </div> -->
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=pk.org.cas.food_delivery_app" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
             </div>
-       
+          </article>
 
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.44s">
-          <div class="projects__card-thumb">
-            <img src="images/sweeft_user.png" alt="Sweeft Customer">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Sweeft Customer</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Sweeft Customer</h3>
-            <p class="projects__card-desc">Sweeft Customer is the consumer side of a multi-service, multi-vendor marketplace for everyday needs. Users explore vendor offerings, book services or place product orders, wait for confirmation, and track deliveries in real time until completion. One account covers varied categories, moving from discovery to fulfilled delivery with clearer status updates and less need to juggle multiple disconnected service apps for common requests. The experience stays focused on clarity, speed, and dependable day-to-day use.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">BLoC</span>
-            </div>
-            <div class="section-divider"></div>
-            <!-- <div class="projects__qr-codes">
-              <div class="projects__qr">
-                <img src="images/qr_sweeft_user.png" alt="Play Store QR">
-                <span>Play Store</span>
+          <article class="pcard glass" data-cat="commerce" data-reveal style="--d:.16s">
+            <div class="pcard__thumb"><img src="images/showcase/kitchen_s1.webp" alt="Mehar's Kitchen showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Mehar's Kitchen</h3>
+              <p>Food ordering for a Dubai-based kitchen — menus, quick checkout and real-time delivery tracking.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">Provider</span><span class="pill">Firebase</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=pk.org.cas.food_delivery_app" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Mehar's Kitchen on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
               </div>
-            </div> -->
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.sweeftcd.user" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
             </div>
+          </article>
 
-          
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.46s">
-          <div class="projects__card-thumb">
-            <img src="images/sweeft_driver.png" alt="Sweeft Driver">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Sweeft Driver</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Sweeft Driver</h3>
-            <p class="projects__card-desc">Sweeft Driver is the field app for delivery and service partners working inside the Sweeft network. Drivers review incoming assignments, accept jobs when available, navigate to pickup or service points, track active deliveries carefully, and close completed work cleanly. It keeps order intake, route execution, and customer-facing status updates aligned during high-frequency daily operations across busy service and delivery schedules. The experience stays focused on clarity, speed, and dependable day-to-day use.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">BLoC</span>
-            </div>
-            <div class="section-divider"></div>
-            <!-- <div class="projects__qr-codes">
-              <div class="projects__qr">
-                <img src="images/qr_sweeft_driver.png" alt="Play Store QR">
-                <span>Play Store</span>
+          <article class="pcard glass" data-cat="health" data-reveal style="--d:.2s">
+            <div class="pcard__thumb"><img src="images/showcase/clodoc_s1.webp" alt="Clodocs showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Clodocs</h3>
+              <p>Telemedicine with secure Agora RTC video consultations, AI symptom triage to the right specialist, appointment booking and visit history.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">Agora RTC</span><span class="pill">GetX</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.clodocs.videocalling&hl=en" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Clodocs on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
               </div>
-            </div> -->
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.sweeftcd.driver" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
             </div>
+          </article>
 
-         
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.48s">
-          <div class="projects__card-thumb">
-            <img src="images/sweeft_store.png" alt="Sweeft Store">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Sweeft Store</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Sweeft Store</h3>
-            <p class="projects__card-desc">Sweeft Store is the vendor console for businesses selling through the Sweeft multi-vendor network. Teams update catalogs, monitor inventory levels, receive customer orders as they arrive, prepare fulfillment, and hand off work to delivery partners. It centralizes listings, stock, and order handling so vendors respond faster in busy periods without juggling fragmented tools or missing important customer requests. The experience stays focused on clarity, speed, and dependable day-to-day use. Each screen is oriented around practical decisions users make during real.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">BLoC</span>
-            </div>
-            <div class="section-divider"></div>
-            <!-- <div class="projects__qr-codes">
-              <div class="projects__qr">
-                <img src="images/qr_sweeft_store.png" alt="Play Store QR">
-                <span>Play Store</span>
+          <article class="pcard glass" data-cat="health" data-reveal style="--d:.24s">
+            <div class="pcard__thumb"><img src="images/showcase/moov_s1.webp" alt="MOOV Forward showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>MOOV Forward</h3>
+              <p>Book private coaches and tutors — instant scheduling, in-app payments and trainer messaging.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">Riverpod</span><span class="pill">Firebase</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.moovforward.videocalling&hl=en" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="MOOV Forward on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
               </div>
-            </div> -->
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.sweeftcd.store" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
             </div>
+          </article>
 
-           
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.5s">
-          <div class="projects__card-thumb">
-            <img src="images/Flynet_security.png" alt="Flynet Security">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Flynet Security</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Flynet Security</h3>
-            <p class="projects__card-desc">Flynet Security is an enterprise CCTV monitoring product for continuous surveillance and incident follow-up. Security teams view live camera streams, record footage during active watches, and retrieve stored clips when investigations require playback, with cloud-integrated access across supported camera manufacturers. Typical use includes opening feeds, supervising zones, capturing recordings, and reviewing incidents as part of reliable daily security workflows. The experience stays focused on clarity, speed, and dependable day-to-day use.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">BLoC</span>
-            </div>
-            <div class="section-divider"></div>
-            <!-- <div class="projects__qr-codes">
-              <div class="projects__qr">
-                <img src="images/qr_flynet.png" alt="Play Store QR">
-                <span>Play Store</span>
+          <article class="pcard glass" data-cat="health" data-reveal style="--d:.28s">
+            <div class="pcard__thumb"><img src="images/showcase/elms_s1.webp" alt="CAS ELMS showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>CAS ELMS</h3>
+              <p>Student LMS — quizzes, results, fee history and geofenced auto-attendance on campus arrival.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">Geofencing</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.cas.elms&hl=en" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="CAS ELMS on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
               </div>
-            </div> -->
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=fc.flynet.me" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
             </div>
+          </article>
 
-        
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.52s">
-          <div class="projects__card-thumb">
-            <img src="images/Filao.png" alt="Fillao">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Fillao</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Fillao</h3>
-            <p class="projects__card-desc">Fillao is a CRM-style business app for teams that need customer and project clarity in one workspace. Users track customer interactions, segment audiences, manage projects through delivery milestones, generate invoices, and follow payment status after billing. Profile controls and multilingual options keep preferences organized. The flow connects customer context, project progress, billing, and collections without scattered spreadsheets or chat-only coordination. The experience stays focused on clarity, speed, and dependable day-to-day use.</p>
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">GetX</span>
-            </div>
-            <div class="section-divider"></div>
-            <!-- <div class="projects__qr-codes">
-              <div class="projects__qr">
-                <img src="images/qr_filao.png" alt="Play Store QR">
-                <span>Play Store</span>
+          <article class="pcard glass" data-cat="business" data-reveal>
+            <div class="pcard__thumb"><img src="images/showcase/flynet_s3.webp" alt="Flynet Security showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Flynet Security</h3>
+              <p>Enterprise CCTV monitoring — live camera streams, cloud recording and incident playback.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">Video Streaming</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=fc.flynet.me" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Flynet Security on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
               </div>
-            </div> -->
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.cdfillao.app&hl=en" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
             </div>
+          </article>
 
-       
-          </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.54s">
-          <div class="projects__card-thumb">
-            <img src="images/iclock_compay.png" alt="iClock Company">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">iClock Company</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">iClock Company</h3>
-            <p class="projects__card-desc">iClock Company is the admin side of workforce attendance management for growing organizations. Managers review company-wide check-ins, configure and monitor shift schedules, investigate attendance exceptions quickly, and use reporting dashboards for presence and leave trends. It supports clearer HR control from daily operational oversight through shift planning and monthly workforce reporting across multiple teams and business locations. The experience stays focused on clarity, speed, and dependable day-to-day use. Each screen is oriented around practical decisions users make during real operations.</p>
-            
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">REST APIs</span>
-              <span class="projects__pill">BLoC</span>
-            </div>
-            <div class="section-divider"></div>
-            <!-- <div class="projects__qr-codes">
-              <div class="projects__qr">
-                <img src="images/qr_iclock_admin.png" alt="Play Store QR">
-                <span>Play Store</span>
+          <article class="pcard glass" data-cat="business" data-reveal style="--d:.04s">
+            <div class="pcard__thumb"><img src="images/showcase/filao_s1.webp" alt="Fillao showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Fillao</h3>
+              <p>CRM-style workspace — customers, projects, invoices, payment tracking and AI smart replies for customer conversations.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">GetX</span><span class="pill">Firebase</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.cdfillao.app&hl=en" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Fillao on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
               </div>
-            </div> -->
-            <div class="projects__store-pills">
-              <a href="https://play.google.com/store/apps/details?id=com.iclock.companyapp&hl=en" class="store-btn store-btn--play" target="_blank" rel="noopener noreferrer" aria-label="Get on Google Play">
-                <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
-                <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
-              </a>
             </div>
+          </article>
 
-       
+          <article class="pcard glass" data-cat="business" data-reveal style="--d:.08s">
+            <div class="pcard__thumb"><img src="images/showcase/iclock_s1.webp" alt="iClock showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>iClock</h3>
+              <p>Attendance &amp; leave app — location-verified check-ins and paperless leave requests.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">Firebase</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.mucode.iclock_app" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="iClock on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pcard glass" data-cat="business" data-reveal style="--d:.12s">
+            <div class="pcard__thumb"><img src="images/showcase/comp_s1.webp" alt="iClock Company showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>iClock Company</h3>
+              <p>Admin console for workforce attendance — shifts, exceptions and presence analytics.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">Dashboards</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.iclock.companyapp&hl=en" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="iClock Company on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pcard glass" data-cat="business" data-reveal style="--d:.16s">
+            <div class="pcard__thumb"><img src="images/showcase/pos_s1.webp" alt="Codepul POS showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Codepul POS</h3>
+              <p>Retail point-of-sale — fast counter billing, live stock updates and daily sales analytics.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">Firebase</span></div>
+            </div>
+          </article>
+
+          <article class="pcard glass" data-cat="business" data-reveal style="--d:.2s">
+            <div class="pcard__thumb"><img src="images/showcase/chat_s1.webp" alt="Messages showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Messages</h3>
+              <p>Full-featured SMS messenger — dual-SIM support, pinned chats, drafts, search and theming.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">go_router</span></div>
+            </div>
+          </article>
+
+          <article class="pcard glass" data-cat="lifestyle" data-reveal style="--d:.24s">
+            <div class="pcard__thumb"><img src="images/showcase/arrow_flow_s1.webp" alt="Arrow Flow showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Arrow Flow</h3>
+              <p>Original grid puzzle built with Flame — 200 levels, star ratings, lives and rewarded ads.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">Flame</span><span class="pill">Riverpod</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=com.arrowpuzzle.azgame" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Arrow Flow on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="pcard glass" data-cat="lifestyle" data-reveal style="--d:.28s">
+            <div class="pcard__thumb"><img src="images/showcase/inviter_s1.webp" alt="Invitor App showcase" loading="lazy" width="1600" height="1000"></div>
+            <div class="pcard__body">
+              <h3>Invitor App</h3>
+              <p>Create and send animated digital invitation cards for events and celebrations.</p>
+              <div class="pill-row"><span class="pill">Flutter</span><span class="pill">BLoC</span><span class="pill">Firebase</span></div>
+              <div class="pcard__stores">
+                <a href="https://play.google.com/store/apps/details?id=pk.org.cas.invitor" class="store-btn store-btn--sm" target="_blank" rel="noopener noreferrer" aria-label="Invitor App on Google Play">
+                  <svg class="store-btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20.5V3.5c0-.8.9-1.3 1.5-.9l14.2 8.5c.7.4.7 1.4 0 1.8L4.5 21.4c-.6.4-1.5-.1-1.5-.9z"/></svg>
+                  <span class="store-btn__text"><span class="store-btn__label">Get it on</span><span class="store-btn__name">Google Play</span></span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="confidential glass" data-reveal>
+          <div class="confidential__icon" aria-hidden="true">
+            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           </div>
-        </article>
-
-        <article class="projects__card" style="--delay: 0.28s">
-          <div class="projects__card-thumb">
-            <img src="images/pos.png" alt="Codepul POS">
-            <div class="projects__card-overlay">
-              <h3 class="projects__card-title">Codepul POS</h3>
-            </div>
-          </div>
-          <div class="projects__card-content">
-            <h3 class="projects__card-heading">Codepul POS</h3>
-            <p class="projects__card-desc">Codepul POS is a retail point-of-sale system for fast counter billing and practical inventory control. Cashiers select or scan items, confirm totals, and complete sales with fewer manual errors while stock levels update as transactions happen. Owners review analytics for top-selling products and daily performance, covering checkout speed, stock awareness, and end-of-day business insight inside one dependable counter workflow for small and mid-size shops. The experience stays focused on clarity, speed, and dependable day-to-day use.</p>
-            
-            <div class="projects__tech-stack">
-              <span class="projects__pill">Flutter</span>
-              <span class="projects__pill">Firebase</span>
-              <span class="projects__pill">BLoC</span>
-            </div>
-          </div>
-        </article>
-        
-
-      </div>
-
-    </div>
-    <div class="container confidential__container">
-      <div class="confidential__box reveal" style="--delay: 0s">
-        <div class="confidential__border-wrapper">
-          <div class="confidential__border-animated"></div>
-          <div class="confidential__content">
-            <div class="confidential__icon" aria-hidden="true">
-              <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-              </svg>
-            </div>
-            <h2 class="section-heading section-heading--centered confidential__heading">
-              Confidential Projects
-            </h2>
-            <p class="confidential__text">
-              I've developed <strong>40+ Flutter applications</strong> throughout my career. Due to non-disclosure agreements and confidentiality contracts with clients and companies, many projects cannot be showcased publicly. The portfolio above represents a selection of my publicly available work.
-            </p>
+          <div class="confidential__text">
+            <h3>Confidential Projects</h3>
+            <p>I've developed <strong>40+ Flutter applications</strong> throughout my career. Due to non-disclosure agreements and confidentiality contracts with clients and companies, many projects cannot be showcased publicly. The portfolio above represents a selection of my publicly available work.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-
-
-  <!-- Contact Section -->
-  <section class="contact reveal" id="contact">
-    <div class="container contact__inner">
-      <h2 class="section-heading section-heading--centered reveal reveal--up" style="--delay: 0s">
-        GET IN TOUCH
-      </h2>
-      <p class="section-subheading reveal reveal--up" style="--delay: 0.06s">Let's discuss your next project</p>
-      <form class="contact__form reveal reveal--up" style="--delay: 0.12s" id="contactForm">
-        <div class="contact__row">
-          <input type="text" name="name" id="contactName" class="contact__input" placeholder="Your Name" required>
-          <input type="email" name="email" id="contactEmail" class="contact__input" placeholder="Email Address" required>
+    <!-- ============ Contact ============ -->
+    <section class="section contact" id="contact">
+      <div class="container contact__inner">
+        <div class="contact__info" data-reveal>
+          <h2 class="section-heading">LET'S BUILD</h2>
+          <h3 class="contact__subheading">Have an app idea — or an existing product that needs an <span class="gradient-text">AI edge</span>? Tell me about it.</h3>
+          <p class="contact__text">I usually reply within 24 hours. First call is free — we'll scope the idea, pick the right architecture and estimate a timeline.</p>
+          <div class="contact__cards">
+            <a href="mailto:abdulkarim3974@gmail.com" class="contact__card glass">
+              <span class="contact__card-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></svg>
+              </span>
+              <span class="contact__card-body"><em>Email</em><strong>abdulkarim3974@gmail.com</strong></span>
+            </a>
+            <a href="https://wa.me/923057099816" target="_blank" rel="noopener noreferrer" class="contact__card glass">
+              <span class="contact__card-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </span>
+              <span class="contact__card-body"><em>WhatsApp / Call</em><strong>+92 305 7099816</strong></span>
+            </a>
+            <a href="https://www.linkedin.com/in/abdulkarim-developer" target="_blank" rel="noopener noreferrer" class="contact__card glass">
+              <span class="contact__card-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </span>
+              <span class="contact__card-body"><em>LinkedIn</em><strong>in/abdulkarim-developer</strong></span>
+            </a>
+          </div>
         </div>
-        <input type="text" name="subject" id="contactSubject" class="contact__input" placeholder="Subject">
-        <textarea name="message" id="contactMessage" class="contact__textarea" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="btn btn--primary contact__submit">Send</button>
-      </form>
-    </div>
-  </section>
 
-  <!-- Footer -->
+        <form class="contact__form glass" id="contactForm" data-reveal style="--d:.12s" novalidate>
+          <div class="contact__row">
+            <div class="field">
+              <label for="contactName">Name</label>
+              <input type="text" id="contactName" name="name" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" name="email" placeholder="you@company.com" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="contactSubject">Project type</label>
+            <select id="contactSubject" name="subject">
+              <option>New app (MVP to launch)</option>
+              <option>AI integration into an existing app</option>
+              <option>Cross-platform Flutter development</option>
+              <option>UI implementation from Figma</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" rows="5" placeholder="Tell me about your product, users and timeline…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg contact__submit">
+            Send Message
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+          </button>
+          <div class="form-toast" id="formToast" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
   <footer class="footer">
-    <div class="container footer__main">
-      <div class="footer__column">
-        <h4 class="footer__heading"><span class="footer__accent">|</span> Quick Links</h4>
-        <nav class="footer__links">
-          <a href="#hero">Home</a>
-          <a href="#skills">Skills</a>
-          <a href="#experience">Experience</a>
-          <a href="#services">Services</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-        </nav>
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#home" class="header__logo">
+          <span class="header__logo-mark">AK</span>
+          <span class="header__logo-text">Abdul&nbsp;Karim<span class="header__logo-dot">.</span></span>
+        </a>
+        <p>Senior Flutter Developer — building AI-powered, production-grade apps for iOS &amp; Android.</p>
       </div>
-      <div class="footer__column">
-        <h4 class="footer__heading"><span class="footer__accent">|</span> ABOUT ME</h4>
-        <p class="footer__about">Senior Flutter Developer with <strong>5+ years of experience</strong> and <strong>40+ production-ready apps</strong> for iOS & Android. I build high-performance, scalable apps with clean architecture and responsive UI. Specialized in seamless cross-platform functionality and robust user-centric solutions.</p>
-      </div>
-      <div class="footer__column">
-        <h4 class="footer__heading"><span class="footer__accent">|</span> GET IN TOUCH</h4>
-        <div class="footer__contact">
-          <div class="footer__contact-item">
-            <span class="footer__label">Email Address</span>
-            <a href="mailto:abdulkarim3974@gmail.com">abdulkarim3974@gmail.com</a>
-          </div>
-            <div class="footer__contact-item">
-            <span class="footer__label">Phone Number</span>
-            <a href="tel:+923057099816" class="footer__phone-link" data-phone-link data-phone="923057099816">+92 305 7099816</a>
-          </div>
-        </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <h4>Explore</h4>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#ai">Flutter × AI</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Featured Work</a>
+        <a href="#projects">All Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer__connect">
+        <h4>Connect</h4>
+        <a href="mailto:abdulkarim3974@gmail.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-10 6L2 7"/></svg>
+          abdulkarim3974@gmail.com
+        </a>
+        <a href="https://wa.me/923057099816" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          +92 305 7099816
+        </a>
+        <a href="https://www.linkedin.com/in/abdulkarim-developer" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="resume.pdf" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+          View Résumé (PDF)
+        </a>
       </div>
     </div>
     <div class="footer__bottom">
       <div class="container footer__bottom-inner">
-        <p class="footer__copyright">© Abdul Karim - Senior Flutter Developer. All rights reserved.</p>
-        <div class="footer__social">
-
-          <a href="https://www.linkedin.com/in/abdulkarim-developer" target="_blank"  class="footer__social-link" aria-label="LinkedIn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-          </a>
-        </div>
+        <p>© <span id="year">2026</span> Abdul Karim — Senior Flutter Developer. All rights reserved.</p>
+        <p class="footer__line">Clean architecture · AI-ready · shipped to both stores</p>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll to Top -->
-  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <polyline points="18 15 12 9 6 15"/>
-    </svg>
+  <!-- Floating actions -->
+  <button class="scroll-top glass" id="scrollTop" aria-label="Scroll to top">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
-
-  <a
-    class="whatsapp-fab"
-    href="https://wa.me/923057099816"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Chat on WhatsApp"
-  >
-    <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
+  <a class="whatsapp-fab" href="https://wa.me/923057099816" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
       <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
     </svg>
   </a>
