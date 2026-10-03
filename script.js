@@ -224,6 +224,8 @@
 
   /* ---------- Featured slideshows ---------- */
   function initSlideshows() {
+    /* phones: no autoplay (battery + jank); manual arrows/dots still work */
+    var noAutoplay = window.matchMedia("(max-width: 768px)").matches;
     document.querySelectorAll(".showcase").forEach((showcase) => {
       const slides = Array.from(showcase.querySelectorAll(".showcase__slide"));
       const dotsWrap = showcase.querySelector(".showcase__dots");
@@ -262,7 +264,7 @@
 
       function startTimer() {
         stopTimer();
-        if (reducedMotion || slides.length < 2) return;
+        if (reducedMotion || noAutoplay || slides.length < 2) return;
         timer = setInterval(() => show(index + 1), interval);
       }
       function stopTimer() {
